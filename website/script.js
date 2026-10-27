@@ -8,7 +8,7 @@ const FLAVORS = [
   { id: 1,  name: "Mango",                folder: "Mango",                   img: "IMG_2133.JPG", cat: "fruit",   emoji: "🥭", price: "₹149" },
   { id: 2,  name: "Lichi",                folder: "Lichi",                   img: "IMG_2137.JPG", cat: "fruit",   emoji: "🍒", price: "₹149" },
   { id: 3,  name: "Blueberry",            folder: "Blueberry_",              img: "IMG_2141.JPG", cat: "fruit",   emoji: "🫐", price: "₹149" },
-  { id: 4,  name: "Imli",                 folder: "Imli",                    img: "IMG_2145.JPG", cat: "desi",    emoji: "🌰", price: "₹149" },
+  { id: 4,  name: "Emli",                 folder: "Emli",                    img: "IMG_2145.JPG", cat: "desi",    emoji: "🌰", price: "₹149" },
   { id: 5,  name: "Rose",                 folder: "Rose",                    img: "IMG_2149.JPG", cat: "floral",  emoji: "🌹", price: "₹149" },
   { id: 6,  name: "Black Currant",        folder: "Black currant",           img: "IMG_2153.JPG", cat: "fruit",   emoji: "🍇", price: "₹149" },
   { id: 7,  name: "Kulfi Sandwich",       folder: "Kulfi Sandwich_",         img: "IMG_2157.JPG", cat: "desi",    emoji: "🍦", price: "₹149" },
@@ -104,7 +104,7 @@ function buildCarousel() {
 // ── Testimonials Data + Rotator ───────────────────────
 const TESTIMONIALS = [
   { quote: "These are so good it's insane. The perfect crunch, the right amount of sweetness — the fruit flavours are absolutely authentic! Dangerously addictive.", cite: "— Priya S., Mumbai" },
-  { quote: "I've tried so many jelly brands but Lonawala is on another level. The Imli and Jalebi flavours taste exactly like the real thing — pure nostalgia!", cite: "— Rahul M., Delhi" },
+  { quote: "I've tried so many jelly brands but Lonawala is on another level. The Emli and Jalebi flavours taste exactly like the real thing — pure nostalgia!", cite: "— Rahul M., Delhi" },
   { quote: "My kids absolutely love the Mango and Strawberry. The sugar coating gives it that satisfying crunch. We order 3–4 packs every month now!", cite: "— Kavita P., Surat" },
   { quote: "The Rose flavour is so unique and delicate! Ordered for a family function and everyone wanted to know where to get more. Absolutely premium taste.", cite: "— Anita K., Ahmedabad" },
 ];
