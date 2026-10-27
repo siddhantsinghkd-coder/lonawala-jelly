@@ -3,24 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Lonawala Jelly – Premium Sugar Coated Jelly Candies | 17 Flavours</title>
   <meta name="description" content="Lonawala Jelly by Kesar Bhavani Industries — India's favourite sugar coated soft jelly candy in 17 amazing flavours. Pure Veg, No Gelatin. Shop on Meesho." />
   <meta name="keywords" content="Lonawala Jelly, jelly candy, sugar coated candy, mango jelly, pure veg candy, Indian candy, buy jelly online, Meesho candy" />
   <meta name="author" content="Kesar Bhavani Industries" />
-  <meta name="robots" content="index, follow" />
-
-  <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://lonawala-jelly.pages.dev/" />
-  <meta property="og:title"       content="Lonawala Jelly – 17 Delicious Flavours" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lonawala-jelly.pages.dev/" />
+  <meta property="og:title" content="Lonawala Jelly – 17 Delicious Flavours" />
   <meta property="og:description" content="India's favourite jelly candy in 17 amazing flavours. Pure Veg, No Gelatin." />
-
+  <meta property="og:image" content="https://lonawala-jelly.pages.dev/assets/hero-lifestyle.jpg" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -39,273 +35,414 @@
 </head>
 <body>
 
-  <!-- ── ANNOUNCEMENT BAR ── -->
-  <div class="announcement-bar">
-    <p>🍬 Free delivery on orders above ₹499 &nbsp;·&nbsp; 17 amazing flavours &nbsp;·&nbsp; Pure Veg &amp; No Gelatin</p>
-  </div>
+<!-- ── ANNOUNCEMENT BAR ── -->
+<div class="announcement-bar">
+  <a href="#shop" class="ann-link">
+    🍬 New Flavours Just Dropped — Shop Now &nbsp;<span class="ann-arrow">→</span>
+  </a>
+</div>
 
-  <!-- ── NAVBAR ── -->
-  <header id="header">
-    <nav class="nav-inner">
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-
-      <a href="#home" class="nav-logo" aria-label="Lonawala Jelly">
-        <img src="assets/logo.svg" alt="Lonawala Jelly" width="110" />
-      </a>
-
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">Our Story</a></li>
-        <li><a href="#flavours">Shop</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      <a href="#flavours" class="nav-cta">Shop Now</a>
-    </nav>
-  </header>
-
-  <!-- Mobile Drawer -->
-  <div class="drawer-overlay" id="drawer-overlay"></div>
-  <div class="drawer" id="drawer">
-    <button class="drawer-close" id="drawer-close">✕</button>
-    <img src="assets/logo.svg" alt="Lonawala Jelly" class="drawer-logo" />
-    <ul>
-      <li><a href="#home" class="drawer-link">Home</a></li>
-      <li><a href="#about" class="drawer-link">Our Story</a></li>
-      <li><a href="#flavours" class="drawer-link">Shop</a></li>
-      <li><a href="#contact" class="drawer-link">Contact</a></li>
+<!-- ── HEADER ── -->
+<header id="header">
+  <nav class="nav-inner container">
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="/" class="nav-logo" aria-label="Lonawala Jelly Home">
+      <img src="assets/logo.svg" alt="Lonawala Jelly" height="52" width="auto" />
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#about">Our Story</a></li>
+      <li><a href="#find-us">Find Us</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="#flavours" class="btn-fill drawer-link" style="margin-top:32px; display:inline-block;">Shop All Flavours →</a>
-  </div>
-
-  <!-- ── HERO ── -->
-  <section id="home" class="hero">
-    <div class="hero-media">
-      <img src="assets/hero-lifestyle.jpg" alt="Lonawala Jelly — colorful sugar coated jelly candies" class="hero-bg-img" />
-      <div class="hero-overlay"></div>
+    <div class="nav-actions">
+      <a href="#shop" class="nav-cta">Shop All</a>
     </div>
-    <div class="hero-content">
-      <span class="eyebrow">Pure Veg · No Gelatin · FSSAI Certified</span>
-      <h1>India's Most<br/><em>Loved Jelly</em></h1>
-      <p class="hero-sub">17 irresistible sugar-coated jelly flavours crafted with real fruit pulp — a bite of joy in every piece.</p>
-      <div class="hero-actions">
-        <a href="#flavours" class="btn-fill">Shop All Flavours</a>
-        <a href="#about" class="btn-outline-white">Our Story</a>
-      </div>
-      <div class="hero-trust">
-        <div class="trust-item"><span class="trust-num">17</span><span class="trust-label">Flavours</span></div>
-        <div class="trust-divider"></div>
-        <div class="trust-item"><span class="trust-num">200g</span><span class="trust-label">Per Pack</span></div>
-        <div class="trust-divider"></div>
-        <div class="trust-item"><span class="trust-num">100%</span><span class="trust-label">Pure Veg</span></div>
-        <div class="trust-divider"></div>
-        <div class="trust-item"><span class="trust-num">0</span><span class="trust-label">Gelatin</span></div>
-      </div>
-    </div>
-  </section>
+  </nav>
+</header>
 
-  <!-- ── MARQUEE STRIP ── -->
-  <div class="marquee-strip" aria-hidden="true">
-    <div class="marquee-track">
-      <span>Mango 🥭</span><span>Strawberry 🍓</span><span>Blueberry 🫐</span>
-      <span>Watermelon 🍉</span><span>Orange 🍊</span><span>Guava 🍈</span>
-      <span>Rose 🌹</span><span>Lichi 🍒</span><span>Imli 🌰</span>
-      <span>Paan 🌿</span><span>Jalebi 🍩</span><span>Black Currant 🫐</span>
-      <span>Green Mango 🥭</span><span>Kulfi 🍦</span><span>Sandwich 🍦</span>
-      <span>Sweetheart 💖</span>
-      <!-- duplicate for seamless loop -->
-      <span>Mango 🥭</span><span>Strawberry 🍓</span><span>Blueberry 🫐</span>
-      <span>Watermelon 🍉</span><span>Orange 🍊</span><span>Guava 🍈</span>
-      <span>Rose 🌹</span><span>Lichi 🍒</span><span>Imli 🌰</span>
-      <span>Paan 🌿</span><span>Jalebi 🍩</span><span>Black Currant 🫐</span>
-      <span>Green Mango 🥭</span><span>Kulfi 🍦</span><span>Sandwich 🍦</span>
-      <span>Sweetheart 💖</span>
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+  <div class="drawer-inner">
+    <button class="drawer-close" id="drawer-close" aria-label="Close menu">✕</button>
+    <a href="/" class="drawer-logo">
+      <img src="assets/logo.svg" alt="Lonawala Jelly" height="48" />
+    </a>
+    <ul class="drawer-links">
+      <li><a href="#shop">Shop All Flavours</a></li>
+      <li><a href="#about">Our Story</a></li>
+      <li><a href="#find-us">Find Us</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="drawer-contact">
+      <p>📞 +91 97272 59995</p>
+      <p>✉️ kesarbhavani4@gmail.com</p>
     </div>
   </div>
+</div>
+<div class="drawer-overlay" id="drawer-overlay"></div>
 
-  <!-- ── ABOUT ── -->
-  <section id="about" class="about">
-    <div class="container about-grid">
-      <div class="about-images" data-animate>
-        <div class="about-img-main">
-          <img src="assets/lifestyle-hand.jpg" alt="Enjoying Lonawala Jelly" loading="lazy" />
-        </div>
-        <div class="about-img-float">
-          <img src="assets/about-story.jpg" alt="Real fruit in every jelly" loading="lazy" />
-        </div>
-      </div>
-
-      <div class="about-text" data-animate>
-        <span class="eyebrow dark">Our Story</span>
-        <h2>Born in Gujarat.<br/>Loved Across India.</h2>
-        <p>Lonawala Jelly was born in the heart of Gujarat, India — where our founder <strong>Hitesh Zatakiya</strong> spent years perfecting the art of the perfect sugar-coated jelly.</p>
-        <p>Made with <strong>real fruit pulp</strong> and <strong>zero gelatin</strong>, every piece is crafted to bring a moment of pure joy to families across India. Each jelly is manufactured under strict FSSAI, ISO &amp; Halal certified standards.</p>
-
-        <div class="cert-row">
-          <div class="cert-pill">✅ FSSAI Certified</div>
-          <div class="cert-pill">🏅 ISO Certified</div>
-          <div class="cert-pill">☪️ Halal Certified</div>
-          <div class="cert-pill">🌱 Pure Veg</div>
-        </div>
-
-        <a href="#flavours" class="btn-fill" style="margin-top:36px; display:inline-block;">Explore All Flavours →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── SHOP / FLAVOURS ── -->
-  <section id="flavours" class="shop">
-    <div class="container">
-      <div class="shop-header" data-animate>
-        <span class="eyebrow dark">The Collection</span>
-        <h2>Shop All Flavours</h2>
-        <p>Every flavour is a little celebration. Pick your favourite or try them all!</p>
-      </div>
-
-      <!-- Filter tabs -->
-      <div class="filter-tabs" role="group" aria-label="Filter flavours">
-        <button class="tab active" data-filter="all">All</button>
-        <button class="tab" data-filter="fruit">🍓 Fruity</button>
-        <button class="tab" data-filter="desi">🌿 Desi</button>
-        <button class="tab" data-filter="floral">🌹 Floral</button>
-        <button class="tab" data-filter="special">💖 Special</button>
-      </div>
-
-      <!-- Product Grid -->
-      <div id="product-grid" class="product-grid"></div>
-    </div>
-  </section>
-
-  <!-- ── FEATURES STRIP ── -->
-  <section class="features-strip">
-    <div class="container features-grid">
-      <div class="feature-item" data-animate>
-        <div class="feature-icon">🌱</div>
-        <h4>100% Pure Veg</h4>
-        <p>No animal products — completely vegetarian-friendly jelly.</p>
-      </div>
-      <div class="feature-item" data-animate>
-        <div class="feature-icon">🚫</div>
-        <h4>Zero Gelatin</h4>
-        <p>Enjoy guilt-free — our jelly never contains gelatin.</p>
-      </div>
-      <div class="feature-item" data-animate>
-        <div class="feature-icon">🍊</div>
-        <h4>Real Fruit Pulp</h4>
-        <p>Made with 10% real fruit pulp for authentic flavour.</p>
-      </div>
-      <div class="feature-item" data-animate>
-        <div class="feature-icon">🏅</div>
-        <h4>FSSAI Certified</h4>
-        <p>Manufactured under strict food safety standards.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── TESTIMONIALS ── -->
-  <section class="testimonials">
-    <div class="container">
-      <div class="section-header-center" data-animate>
-        <span class="eyebrow dark">Happy Customers</span>
-        <h2>What People Are Saying</h2>
-      </div>
-      <div class="reviews-grid">
-        <div class="review-card" data-animate>
-          <div class="stars">★★★★★</div>
-          <p>"My kids absolutely love the Mango jelly! We buy a box every single month. The sugar coating is perfect — not too sweet, not too sour. Best jelly in India!"</p>
-          <div class="reviewer"><div class="reviewer-avatar">PS</div><div><strong>Priya S.</strong><span>Mumbai, Maharashtra</span></div></div>
-        </div>
-        <div class="review-card" data-animate>
-          <div class="stars">★★★★★</div>
-          <p>"Found Lonawala Jelly on Meesho and ordered the Imli and Paan flavours. Both are absolutely amazing! The tamarind one is so authentic. Will definitely reorder."</p>
-          <div class="reviewer"><div class="reviewer-avatar">RK</div><div><strong>Rahul K.</strong><span>Surat, Gujarat</span></div></div>
-        </div>
-        <div class="review-card" data-animate>
-          <div class="stars">★★★★★</div>
-          <p>"Pure veg, no gelatin, and tastes incredible — what more can you ask for? The Strawberry and Rose flavours are my personal favourites. Great quality for the price!"</p>
-          <div class="reviewer"><div class="reviewer-avatar">AS</div><div><strong>Anjali S.</strong><span>Jaipur, Rajasthan</span></div></div>
-        </div>
-        <div class="review-card" data-animate>
-          <div class="stars">★★★★★</div>
-          <p>"Ordered the Jalebi flavour expecting it to be gimmicky but it's honestly spot on! Tastes exactly like jalebi. The whole family is obsessed. Fast delivery too!"</p>
-          <div class="reviewer"><div class="reviewer-avatar">DM</div><div><strong>Deepak M.</strong><span>Pune, Maharashtra</span></div></div>
+<!-- ── HERO ── -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Partake in<br>Daily Sweetness</h1>
+      <div class="hero-btn-wrap">
+        <div class="btn-shadow-wrap">
+          <a href="#shop" class="hero-cta">EXPLORE FLAVOURS</a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+  <div class="hero-image-side">
+    <img src="assets/hero-lifestyle.jpg" alt="Lonawala Jelly assorted flavours" class="hero-img" loading="eager" />
+  </div>
+</section>
 
-  <!-- ── CTA BANNER ── -->
-  <section class="cta-section">
-    <div class="container cta-inner">
-      <div class="cta-text" data-animate>
-        <h2>Ready to Try All<br/><em>17 Flavours?</em></h2>
-        <p>Shop Lonawala Jelly on Meesho — fast delivery, great prices, and smiles guaranteed.</p>
-        <a href="#flavours" class="btn-fill">Shop on Meesho 🛍️</a>
-      </div>
-      <div class="cta-images" aria-hidden="true">
-        <img src="assets/macro-texture.jpg"   alt="Jelly texture"  loading="lazy" />
-        <img src="assets/flatlay.jpg"          alt="Jelly flat-lay" loading="lazy" />
-        <img src="assets/about-story.jpg"      alt="Real fruit"     loading="lazy" />
-      </div>
+<!-- ── MARQUEE 1 ── -->
+<section class="marquee-section marquee-cream">
+  <div class="marquee-track">
+    <div class="marquee-inner" aria-hidden="true">
+      <span>Delicious</span><span class="dot">•</span>
+      <span>Pure Veg</span><span class="dot">•</span>
+      <span>No Gelatin</span><span class="dot">•</span>
+      <span>17 Flavours</span><span class="dot">•</span>
+      <span>Made in India</span><span class="dot">•</span>
+      <span>Delicious</span><span class="dot">•</span>
+      <span>Pure Veg</span><span class="dot">•</span>
+      <span>No Gelatin</span><span class="dot">•</span>
+      <span>17 Flavours</span><span class="dot">•</span>
+      <span>Made in India</span><span class="dot">•</span>
+      <span>Delicious</span><span class="dot">•</span>
+      <span>Pure Veg</span><span class="dot">•</span>
+      <span>No Gelatin</span><span class="dot">•</span>
+      <span>17 Flavours</span><span class="dot">•</span>
+      <span>Made in India</span><span class="dot">•</span>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ── FOOTER ── -->
-  <footer id="contact">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="assets/logo.svg" alt="Lonawala Jelly" width="120" />
-        <p>Premium sugar-coated jelly candy<br/>by Kesar Bhavani Industries.<br/>Pure Veg · No Gelatin · Made in India 🇮🇳</p>
-      </div>
+<!-- ── TAGLINE ── -->
+<section class="tagline-section">
+  <h2 class="tagline-heading">All the Flavours,<br>None of the FOMO</h2>
+</section>
 
-      <div class="footer-col">
-        <h5>Navigate</h5>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">Our Story</a></li>
-          <li><a href="#flavours">Shop</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h5>Contact Us</h5>
-        <ul class="footer-contact">
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Plot 13, Mother Industrial Estate,<br/>Zak GIDC, Kadara-382308, Gujarat
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <a href="mailto:kesarbhavani4@gmail.com">kesarbhavani4@gmail.com</a>
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.82a16 16 0 0 0 6.29 6.29l.94-.93a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <a href="tel:+919727259995">+91 97272 59995</a>
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            FSSAI: 10722009000244
-          </li>
-        </ul>
-      </div>
+<!-- ── PRODUCT CAROUSEL (Partake Style) ── -->
+<section class="carousel-section" id="shop">
+  <div class="carousel-viewport" id="carousel-viewport">
+    <div class="carousel-track" id="carousel-track">
+      <!-- Cards injected by JS -->
     </div>
+  </div>
+  <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Previous flavour">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+  </button>
+  <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Next flavour">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+  </button>
+</section>
 
-    <div class="footer-bottom">
-      <div class="container footer-bottom-inner">
-        <p>© 2026 Lonawala Jelly · Kesar Bhavani Industries · All rights reserved.</p>
-        <div class="footer-certs">
-          <span>FSSAI</span><span>ISO</span><span>IAF</span><span>Halal</span>
+<!-- ── SHOP ALL CTA ── -->
+<section class="shop-all-cta">
+  <div class="shop-all-inner">
+    <div class="shadow-btn-wrap">
+      <a href="#shop" class="shop-all-btn">Shop Your Daily Jelly Fix</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FIND US / WHERE TO BUY ── -->
+<section class="find-us-section" id="find-us">
+  <h2 class="find-us-heading">Available Across India<br>on Meesho</h2>
+  <div class="platform-marquee">
+    <div class="platform-track">
+      <div class="platform-inner">
+        <div class="platform-logo">
+          <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Meesho" width="160" height="48">
+            <text x="10" y="44" font-family="Nunito,Arial" font-weight="900" font-size="40" fill="white">meesho</text>
+          </svg>
+        </div>
+        <div class="platform-logo">
+          <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Amazon" width="160" height="48">
+            <text x="10" y="44" font-family="Nunito,Arial" font-weight="900" font-size="40" fill="white">amazon</text>
+          </svg>
+        </div>
+        <div class="platform-logo">
+          <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Flipkart" width="160" height="48">
+            <text x="10" y="44" font-family="Nunito,Arial" font-weight="900" font-size="40" fill="white">flipkart</text>
+          </svg>
+        </div>
+        <div class="platform-logo">
+          <svg viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Local Stores" width="220" height="48">
+            <text x="10" y="44" font-family="Nunito,Arial" font-weight="900" font-size="38" fill="white">Local Stores</text>
+          </svg>
+        </div>
+        <div class="platform-logo">
+          <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="IndiaMart" width="160" height="48">
+            <text x="10" y="44" font-family="Nunito,Arial" font-weight="900" font-size="40" fill="white">indiamart</text>
+          </svg>
+        </div>
+      </div>
+      <div class="platform-inner" aria-hidden="true">
+        <div class="platform-logo">
+          <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="160" height="48">
+            <text x="10" y="44" font-family="Nunito,Arial" font-weight="900" font-size="40" fill="white">meesho</text>
+          </svg>
+        </div>
+        <div class="platform-logo">
+          <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="160" height="48">
+            <text x="10" y="44" font-family="Nunito,Arial" font-weight="900" font-size="40" fill="white">amazon</text>
+          </svg>
+        </div>
+        <div class="platform-logo">
+          <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="160" height="48">
+            <text x="10" y="44" font-family="Nunito,Arial" font-weight="900" font-size="40" fill="white">flipkart</text>
+          </svg>
+        </div>
+        <div class="platform-logo">
+          <svg viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="220" height="48">
+            <text x="10" y="44" font-family="Nunito,Arial" font-weight="900" font-size="38" fill="white">Local Stores</text>
+          </svg>
+        </div>
+        <div class="platform-logo">
+          <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="160" height="48">
+            <text x="10" y="44" font-family="Nunito,Arial" font-weight="900" font-size="40" fill="white">indiamart</text>
+          </svg>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+  <div class="find-us-cta">
+    <a href="#contact" class="find-us-btn">FIND US IN STORE</a>
+  </div>
+</section>
 
-  <!-- Scroll to top -->
-  <button id="scroll-top" aria-label="Back to top">↑</button>
+<!-- ── WHY LONAWALA (Badges) ── -->
+<section class="why-section" id="why">
+  <div class="why-inner">
+    <div class="why-text-col">
+      <h2 class="why-heading">Leave No<br>Taste Bud<br>Behind</h2>
+      <p class="why-sub">NOW MORE MOUTHS THAN EVER CAN ENJOY LONAWALA</p>
+    </div>
+    <div class="why-badges-col">
+      <div class="why-badges-grid">
+        <div class="why-badge">
+          <div class="badge-icon">🌿</div>
+          <div class="badge-label">100% Pure Veg</div>
+          <div class="badge-desc">No animal products, no gelatin — ever.</div>
+        </div>
+        <div class="why-badge">
+          <div class="badge-icon">🍓</div>
+          <div class="badge-label">Real Fruit Pulp</div>
+          <div class="badge-desc">Made with genuine fruit extracts for authentic taste.</div>
+        </div>
+        <div class="why-badge">
+          <div class="badge-icon">✨</div>
+          <div class="badge-label">Sugar Coated</div>
+          <div class="badge-desc">That perfect crunch you love in every bite.</div>
+        </div>
+        <div class="why-badge">
+          <div class="badge-icon">🇮🇳</div>
+          <div class="badge-label">Made in Gujarat</div>
+          <div class="badge-desc">Proudly crafted in the heart of India.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- ── ABOUT / STORY ── -->
+<section class="about-section" id="about">
+  <div class="about-inner container">
+    <div class="about-img-col">
+      <img src="assets/lifestyle-hand.jpg" alt="Lonawala Jelly — a moment of joy" loading="lazy" />
+    </div>
+    <div class="about-text-col">
+      <h2 class="about-heading">A Recipe For<br>Pure Joy</h2>
+      <p class="about-body">Lonawala Jelly was born in the heart of Gujarat, India — where our founder <strong>Hitesh Zatakiya</strong> spent years perfecting the art of the perfect sugar-coated jelly. Made with real fruit pulp and zero gelatin, every piece is crafted to bring a moment of pure joy to families across India.</p>
+      <p class="about-body">What started as a passion became a promise — to make a jelly candy that tastes incredible, stays true to Indian flavours, and everyone can enjoy.</p>
+      <a href="#shop" class="about-cta">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section class="testimonials-section" id="testimonials">
+  <h2 class="testimonials-heading">Certified Tasty</h2>
+  <div class="testimonials-carousel-wrap">
+    <div class="testimonials-track-outer">
+      <div class="testimonial-side testimonial-left">
+        <div class="stars">★★★★★</div>
+        <p class="testi-quote">"Great for school lunch boxes! My kids absolutely love the mango and strawberry flavours. The sugar coating gives it that satisfying crunch."</p>
+      </div>
+      <div class="testimonial-center" id="testi-center">
+        <div class="stars stars-light">★★★★★</div>
+        <p class="testi-quote" id="testi-quote">"These are so good it's insane. The perfect crunch, the right amount of sweetness — the fruit flavours are absolutely authentic! Dangerously addictive."</p>
+        <cite class="testi-cite" id="testi-cite">— Priya S., Mumbai</cite>
+      </div>
+      <div class="testimonial-side testimonial-right">
+        <div class="stars">★★★★★</div>
+        <p class="testi-quote">"I happened to come across these while shopping and now our whole family is obsessed! My husband loves the Imli, kids love the mango. Best jelly candy in India!"</p>
+      </div>
+    </div>
+    <button class="testi-btn testi-prev" id="testi-prev" aria-label="Previous review">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+    </button>
+    <button class="testi-btn testi-next" id="testi-next" aria-label="Next review">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+  </div>
+  <div class="testi-dots" id="testi-dots">
+    <button class="testi-dot active" aria-label="Review 1"></button>
+    <button class="testi-dot" aria-label="Review 2"></button>
+    <button class="testi-dot" aria-label="Review 3"></button>
+    <button class="testi-dot" aria-label="Review 4"></button>
+  </div>
+</section>
+
+<!-- ── INSTAGRAM ── -->
+<section class="instagram-section">
+  <div class="instagram-header container">
+    <h2 class="ig-heading">Daily Jelly-Pop Joy</h2>
+    <p class="ig-sub"><a href="https://www.instagram.com" target="_blank" rel="noopener" class="ig-handle">FOLLOW US @LONAWALAJELLY</a></p>
+  </div>
+  <div class="ig-grid-wrap">
+    <div class="ig-grid-track" id="ig-track">
+      <!-- Filled by actual lifestyle images -->
+      <div class="ig-item"><img src="assets/hero-lifestyle.jpg" alt="Lonawala Jelly lifestyle" loading="lazy" /></div>
+      <div class="ig-item"><img src="assets/about-story.jpg" alt="Lonawala Jelly flavours" loading="lazy" /></div>
+      <div class="ig-item"><img src="assets/flatlay.jpg" alt="Lonawala Jelly flat lay" loading="lazy" /></div>
+      <div class="ig-item"><img src="assets/lifestyle-hand.jpg" alt="Lonawala Jelly hand" loading="lazy" /></div>
+      <div class="ig-item"><img src="assets/macro-texture.jpg" alt="Lonawala Jelly macro" loading="lazy" /></div>
+      <div class="ig-item"><img src="assets/hero-lifestyle.jpg" alt="Lonawala Jelly lifestyle 2" loading="lazy" /></div>
+      <div class="ig-item"><img src="assets/flatlay.jpg" alt="Lonawala Jelly flavours 2" loading="lazy" /></div>
+      <div class="ig-item"><img src="assets/about-story.jpg" alt="Lonawala Jelly story 2" loading="lazy" /></div>
+      <!-- Duplicate for seamless scroll -->
+      <div class="ig-item" aria-hidden="true"><img src="assets/hero-lifestyle.jpg" alt="" loading="lazy" /></div>
+      <div class="ig-item" aria-hidden="true"><img src="assets/about-story.jpg" alt="" loading="lazy" /></div>
+      <div class="ig-item" aria-hidden="true"><img src="assets/flatlay.jpg" alt="" loading="lazy" /></div>
+      <div class="ig-item" aria-hidden="true"><img src="assets/lifestyle-hand.jpg" alt="" loading="lazy" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOCIAL ICONS ── -->
+<section class="social-icons-section">
+  <div class="social-icons-inner container">
+    <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="52" height="52"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+    <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="52" height="52"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+    </a>
+    <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="52" height="52"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="https://www.meesho.com" target="_blank" rel="noopener" aria-label="Meesho Store" class="social-icon-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="52" height="52"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ── MARQUEE 2 ── -->
+<section class="marquee-section marquee-cream">
+  <div class="marquee-track marquee-right">
+    <div class="marquee-inner" aria-hidden="true">
+      <span>Sweet Treat</span><span class="dot">•</span>
+      <span>Sweeter Mission</span><span class="dot">•</span>
+      <span>Sweet Treat</span><span class="dot">•</span>
+      <span>Sweeter Mission</span><span class="dot">•</span>
+      <span>Sweet Treat</span><span class="dot">•</span>
+      <span>Sweeter Mission</span><span class="dot">•</span>
+      <span>Sweet Treat</span><span class="dot">•</span>
+      <span>Sweeter Mission</span><span class="dot">•</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner container">
+    <div class="contact-text-col">
+      <h2 class="contact-heading">Are You Ready<br>to Partake?</h2>
+      <p class="contact-sub">Be the first to know about new flavours, special offers, and all things delicious — straight to your inbox.</p>
+      <form class="newsletter-form" id="newsletter-form" novalidate>
+        <div class="form-row">
+          <input type="email" id="newsletter-email" name="email" placeholder="EMAIL" autocomplete="email" required aria-label="Your email address" />
+          <button type="submit" aria-label="Subscribe">→</button>
+        </div>
+        <p class="form-success" id="form-success" aria-live="polite"></p>
+      </form>
+    </div>
+    <div class="contact-info-col">
+      <div class="contact-card">
+        <h3>Get In Touch</h3>
+        <p><strong>Kesar Bhavani Industries</strong></p>
+        <p>📍 Gujarat, India</p>
+        <p>📞 <a href="tel:+919727259995">+91 97272 59995</a></p>
+        <p>✉️ <a href="mailto:kesarbhavani4@gmail.com">kesarbhavani4@gmail.com</a></p>
+        <div class="contact-divider"></div>
+        <p><strong>Business Hours</strong></p>
+        <p>Mon–Sat: 9:00 AM – 6:00 PM IST</p>
+        <p>Wholesale &amp; bulk orders welcome!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer" id="footer">
+  <div class="footer-inner container">
+    <div class="footer-col footer-brand">
+      <img src="assets/logo.svg" alt="Lonawala Jelly" class="footer-logo" height="60" />
+      <ul class="footer-links">
+        <li><a href="#shop">Shop All Flavours</a></li>
+        <li><a href="#find-us">Find In Store</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+      </ul>
+      <div class="footer-badges">
+        <div class="footer-badge">🌿 Pure Veg</div>
+        <div class="footer-badge">🍓 Real Fruit</div>
+        <div class="footer-badge">❌ No Gelatin</div>
+        <div class="footer-badge">🇮🇳 Made in India</div>
+      </div>
+    </div>
+    <div class="footer-col footer-subscribe">
+      <div class="footer-contact-block">
+        <p><strong>Kesar Bhavani Industries</strong></p>
+        <p>Gujarat, India</p>
+        <p><a href="tel:+919727259995">+91 97272 59995</a></p>
+        <p><a href="mailto:kesarbhavani4@gmail.com">kesarbhavani4@gmail.com</a></p>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="28" height="28"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="28" height="28"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.meesho.com" target="_blank" rel="noopener" aria-label="Shop on Meesho">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="28" height="28"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Kesar Bhavani Industries · All rights reserved</p>
+    <p>Lonawala Jelly — Bringing Joy, One Jelly at a Time 🍬</p>
+  </div>
+</footer>
+
+<!-- Scroll-to-top -->
+<button class="scroll-top" id="scroll-top" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<script src="script.js"></script>
 </body>
 </html>
