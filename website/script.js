@@ -1,408 +1,163 @@
-/* ============================================
-   LONAWALA JELLY — Main JavaScript
-   ============================================ */
+/* =============================================
+   LONAWALA JELLY — Premium JavaScript
+   ============================================= */
 
-// ---------- Flavours Data ----------
+// ── Flavours Data ──────────────────────────────
 const FLAVORS = [
-  {
-    id: 1,
-    name: "Mango",
-    folder: "Mango",
-    image: "IMG_2133.JPG",
-    color: "#F9A825",
-    colorDark: "#E65100",
-    emoji: "🥭",
-    category: "fruit",
-    desc: "Sweet & tropical mango flavoured jelly",
-    price: "₹149",
-    meesho: "#"
-  },
-  {
-    id: 2,
-    name: "Lichi",
-    folder: "Lichi",
-    image: "IMG_2137.JPG",
-    color: "#F48FB1",
-    colorDark: "#C2185B",
-    emoji: "🍒",
-    category: "fruit",
-    desc: "Juicy & fragrant lychee flavoured jelly",
-    price: "₹149",
-    meesho: "#"
-  },
-  {
-    id: 3,
-    name: "Blueberry",
-    folder: "Blueberry_",
-    image: "IMG_2141.JPG",
-    color: "#5C6BC0",
-    colorDark: "#1A237E",
-    emoji: "🫐",
-    category: "fruit",
-    desc: "Fresh & vibrant blueberry flavoured jelly",
-    price: "₹149",
-    meesho: "#"
-  },
-  {
-    id: 4,
-    name: "Imli",
-    folder: "Imli",
-    image: "IMG_2145.JPG",
-    color: "#A1887F",
-    colorDark: "#4E342E",
-    emoji: "🌰",
-    category: "desi",
-    desc: "Tangy & zingy tamarind flavoured jelly",
-    price: "₹149",
-    meesho: "#"
-  },
-  {
-    id: 5,
-    name: "Rose",
-    folder: "Rose",
-    image: "IMG_2149.JPG",
-    color: "#F06292",
-    colorDark: "#880E4F",
-    emoji: "🌹",
-    category: "floral",
-    desc: "Delicate & floral rose flavoured jelly",
-    price: "₹149",
-    meesho: "#"
-  },
-  {
-    id: 6,
-    name: "Black Currant",
-    folder: "Black currant",
-    image: "IMG_2153.JPG",
-    color: "#7E57C2",
-    colorDark: "#311B92",
-    emoji: "🫐",
-    category: "fruit",
-    desc: "Rich & bold black currant flavoured jelly",
-    price: "₹149",
-    meesho: "#"
-  },
-  {
-    id: 7,
-    name: "Kulfi Sandwich",
-    folder: "Kulfi Sandwich_",
-    image: "IMG_2157.JPG",
-    color: "#26C6DA",
-    colorDark: "#006064",
-    emoji: "🍦",
-    category: "desi",
-    desc: "Creamy & indulgent kulfi sandwich flavoured jelly",
-    price: "₹149",
-    meesho: "#"
-  },
-  {
-    id: 8,
-    name: "Green Mango",
-    folder: "Green Mango_",
-    image: "IMG_2161.JPG",
-    color: "#66BB6A",
-    colorDark: "#1B5E20",
-    emoji: "🥭",
-    category: "fruit",
-    desc: "Tangy & sharp raw mango flavoured jelly",
-    price: "₹149",
-    meesho: "#"
-  },
-  {
-    id: 9,
-    name: "Watermelon",
-    folder: "Watermelon_",
-    image: "IMG_2165.JPG",
-    color: "#EF5350",
-    colorDark: "#B71C1C",
-    emoji: "🍉",
-    category: "fruit",
-    desc: "Refreshing & juicy watermelon flavoured jelly",
-    price: "₹149",
-    meesho: "#"
-  },
-  {
-    id: 10,
-    name: "Strawberry",
-    folder: "Strawberry_",
-    image: "IMG_2169.JPG",
-    color: "#EC407A",
-    colorDark: "#880E4F",
-    emoji: "🍓",
-    category: "fruit",
-    desc: "Sweet & luscious strawberry flavoured jelly",
-    price: "₹149",
-    meesho: "#"
-  },
-  {
-    id: 11,
-    name: "Guava",
-    folder: "Guava",
-    image: "IMG_2173.JPG",
-    color: "#FF7043",
-    colorDark: "#BF360C",
-    emoji: "🍈",
-    category: "fruit",
-    desc: "Tropical & tangy guava flavoured jelly",
-    price: "₹149",
-    meesho: "#"
-  },
-  {
-    id: 12,
-    name: "PAN",
-    folder: "PAN",
-    image: "IMG_2177.JPG",
-    color: "#43A047",
-    colorDark: "#1B5E20",
-    emoji: "🌿",
-    category: "desi",
-    desc: "Classic & aromatic paan flavoured jelly",
-    price: "₹149",
-    meesho: "#"
-  },
-  {
-    id: 13,
-    name: "Sandwich",
-    folder: "Sandwich_",
-    image: "IMG_2181.JPG",
-    color: "#AB47BC",
-    colorDark: "#4A148C",
-    emoji: "🍦",
-    category: "special",
-    desc: "Unique & delightful sandwich flavoured jelly",
-    price: "₹149",
-    meesho: "#"
-  },
-  {
-    id: 14,
-    name: "Jalebi",
-    folder: "Jalebi",
-    image: "IMG_2185.JPG",
-    color: "#FFA726",
-    colorDark: "#E65100",
-    emoji: "🍩",
-    category: "desi",
-    desc: "Desi & sweet jalebi flavoured jelly",
-    price: "₹149",
-    meesho: "#"
-  },
-  {
-    id: 15,
-    name: "Sweetheart",
-    folder: "Sweetheart_",
-    image: "IMG_2189.JPG",
-    color: "#F48FB1",
-    colorDark: "#880E4F",
-    emoji: "💜",
-    category: "special",
-    desc: "Sweet & charming sweetheart flavoured jelly",
-    price: "₹149",
-    meesho: "#"
-  },
-  {
-    id: 16,
-    name: "Orange",
-    folder: "Orange",
-    image: "IMG_2193.JPG",
-    color: "#FF5722",
-    colorDark: "#BF360C",
-    emoji: "🍊",
-    category: "fruit",
-    desc: "Zesty & refreshing orange flavoured jelly",
-    price: "₹149",
-    meesho: "#"
-  },
-  {
-    id: 17,
-    name: "Sweetheart Heart Pack",
-    folder: "Sweetheart Heart Packing",
-    image: "IMG_2197.JPG",
-    color: "#E91E63",
-    colorDark: "#880E4F",
-    emoji: "💖",
-    category: "special",
-    desc: "Special heart-pack edition — perfect for gifting!",
-    price: "₹149",
-    meesho: "#"
-  }
+  { id:1,  name:"Mango",                folder:"Mango",                   img:"IMG_2133.JPG", emoji:"🥭", cat:"fruit",   desc:"Sweet & tropical mango-flavoured sugar-coated jelly.",         price:"₹149" },
+  { id:2,  name:"Lichi",                folder:"Lichi",                   img:"IMG_2137.JPG", emoji:"🍒", cat:"fruit",   desc:"Juicy & fragrant lychee-flavoured sugar-coated jelly.",         price:"₹149" },
+  { id:3,  name:"Blueberry",            folder:"Blueberry_",              img:"IMG_2141.JPG", emoji:"🫐", cat:"fruit",   desc:"Fresh & vibrant blueberry-flavoured sugar-coated jelly.",       price:"₹149" },
+  { id:4,  name:"Imli",                 folder:"Imli",                    img:"IMG_2145.JPG", emoji:"🌰", cat:"desi",    desc:"Tangy & zingy tamarind-flavoured sugar-coated jelly.",           price:"₹149" },
+  { id:5,  name:"Rose",                 folder:"Rose",                    img:"IMG_2149.JPG", emoji:"🌹", cat:"floral",  desc:"Delicate & floral rose-flavoured sugar-coated jelly.",           price:"₹149" },
+  { id:6,  name:"Black Currant",        folder:"Black currant",           img:"IMG_2153.JPG", emoji:"🫐", cat:"fruit",   desc:"Rich & bold black currant-flavoured sugar-coated jelly.",       price:"₹149" },
+  { id:7,  name:"Kulfi Sandwich",       folder:"Kulfi Sandwich_",         img:"IMG_2157.JPG", emoji:"🍦", cat:"desi",    desc:"Creamy & indulgent kulfi sandwich-flavoured jelly.",             price:"₹149" },
+  { id:8,  name:"Green Mango",          folder:"Green Mango_",            img:"IMG_2161.JPG", emoji:"🥭", cat:"fruit",   desc:"Tangy & sharp raw mango-flavoured sugar-coated jelly.",          price:"₹149" },
+  { id:9,  name:"Watermelon",           folder:"Watermelon_",             img:"IMG_2165.JPG", emoji:"🍉", cat:"fruit",   desc:"Refreshing & juicy watermelon-flavoured sugar-coated jelly.",   price:"₹149" },
+  { id:10, name:"Strawberry",           folder:"Strawberry_",             img:"IMG_2169.JPG", emoji:"🍓", cat:"fruit",   desc:"Sweet & luscious strawberry-flavoured sugar-coated jelly.",     price:"₹149" },
+  { id:11, name:"Guava",                folder:"Guava",                   img:"IMG_2173.JPG", emoji:"🍈", cat:"fruit",   desc:"Tropical & tangy guava-flavoured sugar-coated jelly.",           price:"₹149" },
+  { id:12, name:"PAN",                  folder:"PAN",                     img:"IMG_2177.JPG", emoji:"🌿", cat:"desi",    desc:"Classic & aromatic paan-flavoured sugar-coated jelly.",          price:"₹149" },
+  { id:13, name:"Sandwich",             folder:"Sandwich_",               img:"IMG_2181.JPG", emoji:"🍦", cat:"special", desc:"Unique & delightful sandwich-flavoured sugar-coated jelly.",    price:"₹149" },
+  { id:14, name:"Jalebi",               folder:"Jalebi",                  img:"IMG_2185.JPG", emoji:"🍩", cat:"desi",    desc:"Desi & sweet jalebi-flavoured sugar-coated jelly.",              price:"₹149" },
+  { id:15, name:"Sweetheart",           folder:"Sweetheart_",             img:"IMG_2189.JPG", emoji:"💜", cat:"special", desc:"Sweet & charming sweetheart-flavoured sugar-coated jelly.",     price:"₹149" },
+  { id:16, name:"Orange",               folder:"Orange",                  img:"IMG_2193.JPG", emoji:"🍊", cat:"fruit",   desc:"Zesty & refreshing orange-flavoured sugar-coated jelly.",       price:"₹149" },
+  { id:17, name:"Sweetheart Heart Pack",folder:"Sweetheart Heart Packing",img:"IMG_2197.JPG", emoji:"💖", cat:"special", desc:"Special heart-pack edition — the perfect sweet gift!",          price:"₹149" },
 ];
 
-// ---------- Floating Candies (Hero) ----------
-function createFloatingCandies() {
-  const container = document.querySelector('.floating-candies');
-  if (!container) return;
+const CAT_LABELS = {
+  fruit:   "Fruity",
+  desi:    "Desi",
+  floral:  "Floral",
+  special: "Special",
+};
 
-  const candyEmojis = ['🍬', '🍭', '🍡', '🍊', '🥭', '🍓', '🫐', '🍉', '🌹', '🍒'];
-  const count = 18;
-
-  for (let i = 0; i < count; i++) {
-    const candy = document.createElement('div');
-    candy.classList.add('candy');
-    candy.textContent = candyEmojis[Math.floor(Math.random() * candyEmojis.length)];
-    candy.style.left = `${Math.random() * 100}%`;
-    candy.style.animationDuration = `${8 + Math.random() * 12}s`;
-    candy.style.animationDelay = `${Math.random() * 10}s`;
-    candy.style.fontSize = `${1.5 + Math.random() * 2}rem`;
-    container.appendChild(candy);
-  }
-}
-
-// ---------- Render Flavor Cards ----------
-function renderFlavorCards(flavors) {
-  const grid = document.getElementById('flavours-grid');
+// ── Render cards ───────────────────────────────
+function renderCards(list) {
+  const grid = document.getElementById('product-grid');
   if (!grid) return;
-
   grid.innerHTML = '';
 
-  flavors.forEach((f, i) => {
-    const imagePath = `../Lonawala Jelly/${f.folder}/${f.image}`;
+  if (list.length === 0) {
+    grid.innerHTML = '<p style="text-align:center;color:var(--text-muted);grid-column:1/-1;padding:40px 0">No flavours found.</p>';
+    return;
+  }
 
+  list.forEach((f, i) => {
+    const imgPath = `images/${f.folder}/${f.img}`;
     const card = document.createElement('div');
-    card.className = 'flavor-card fade-in';
-    card.style.setProperty('--flavor-color', f.color);
-    card.style.animationDelay = `${i * 0.05}s`;
-
+    card.className = 'product-card';
+    card.style.animationDelay = `${i * 0.04}s`;
     card.innerHTML = `
-      <div class="card-image-wrap">
+      <div class="card-img-wrap">
         <img
-          src="${imagePath}"
-          alt="${f.name} Jelly"
+          src="${imgPath}"
+          alt="${f.name} Jelly — Lonawala"
           loading="lazy"
-          onerror="this.style.display='none'"
+          width="400" height="300"
+          onerror="this.closest('.card-img-wrap').style.background='var(--cream-dark)';this.style.display='none'"
         />
-        <div class="card-emoji">${f.emoji}</div>
-        <div class="card-weight-badge">200 gm</div>
+        <span class="card-badge">${CAT_LABELS[f.cat] || f.cat}</span>
+        <span class="card-emoji">${f.emoji}</span>
       </div>
       <div class="card-body">
-        <span class="card-flavor-tag">${f.category.toUpperCase()}</span>
         <h3>${f.name}</h3>
         <p>${f.desc}</p>
         <div class="card-footer">
-          <div class="card-price">
-            ${f.price} <span>/ 200gm</span>
-          </div>
-          <a href="${f.meesho}" target="_blank" rel="noopener" class="btn-meesho">
-            🛍️ Buy on Meesho
+          <div class="card-price">${f.price} <small>/ 200g</small></div>
+          <a href="#" class="btn-buy" aria-label="Buy ${f.name} Jelly on Meesho">
+            🛍️ Meesho
           </a>
         </div>
-        <div class="pure-veg">Pure Veg &nbsp;|&nbsp; No Gelatin</div>
+        <div class="veg-tag"><span class="veg-dot"></span> Pure Veg &nbsp;·&nbsp; No Gelatin</div>
       </div>
     `;
-
     grid.appendChild(card);
   });
-
-  // Trigger fade-in for new cards
-  requestAnimationFrame(() => {
-    document.querySelectorAll('.flavor-card.fade-in').forEach((el, i) => {
-      setTimeout(() => el.classList.add('visible'), i * 60);
-    });
-  });
 }
 
-// ---------- Filter Logic ----------
+// ── Filter tabs ────────────────────────────────
 function initFilters() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
-
-  filterBtns.forEach(btn => {
+  document.querySelectorAll('.tab').forEach(btn => {
     btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-
-      const category = btn.dataset.filter;
-      const filtered = category === 'all'
-        ? FLAVORS
-        : FLAVORS.filter(f => f.category === category);
-
-      renderFlavorCards(filtered);
+      const cat = btn.dataset.filter;
+      renderCards(cat === 'all' ? FLAVORS : FLAVORS.filter(f => f.cat === cat));
     });
   });
 }
 
-// ---------- Navbar Scroll Behaviour ----------
-function initNavbar() {
-  const navbar = document.getElementById('navbar');
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.querySelector('.nav-links');
-
+// ── Sticky header shadow ───────────────────────
+function initHeader() {
+  const header = document.getElementById('header');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
+    header.classList.toggle('scrolled', window.scrollY > 30);
   }, { passive: true });
-
-  hamburger?.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-    hamburger.textContent = navLinks.classList.contains('open') ? '✕' : '☰';
-  });
-
-  // Close mobile menu on nav link click
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      hamburger.textContent = '☰';
-    });
-  });
 }
 
-// ---------- Scroll-to-Top ----------
+// ── Mobile drawer ──────────────────────────────
+function initDrawer() {
+  const burger  = document.getElementById('hamburger');
+  const drawer  = document.getElementById('drawer');
+  const overlay = document.getElementById('drawer-overlay');
+  const close   = document.getElementById('drawer-close');
+
+  function open()  { drawer.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function close_() { drawer.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; }
+
+  burger?.addEventListener('click', open);
+  close?.addEventListener('click', close_);
+  overlay?.addEventListener('click', close_);
+  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', close_));
+}
+
+// ── Scroll-to-top ──────────────────────────────
 function initScrollTop() {
   const btn = document.getElementById('scroll-top');
-  if (!btn) return;
-
   window.addEventListener('scroll', () => {
-    btn.classList.toggle('visible', window.scrollY > 400);
+    btn?.classList.toggle('show', window.scrollY > 500);
   }, { passive: true });
-
-  btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  btn?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 
-// ---------- Intersection Observer (fade-in on scroll) ----------
-function initScrollAnimations() {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+// ── Intersection Observer (scroll animations) ──
+function initAnimations() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in-view');
+        observer.unobserve(e.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-  document.querySelectorAll('.fade-in:not(.flavor-card)').forEach(el => {
-    observer.observe(el);
-  });
+  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
 }
 
-// ---------- Active Nav Link on Scroll ----------
+// ── Active nav link on scroll ──────────────────
 function initActiveNav() {
   const sections = document.querySelectorAll('section[id], footer[id]');
-  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  const links    = document.querySelectorAll('.nav-links a[href^="#"]');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(link => {
-          link.classList.toggle('active-link', link.getAttribute('href') === `#${entry.target.id}`);
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => {
+          l.style.color = l.getAttribute('href') === `#${e.target.id}` ? 'var(--teal)' : '';
         });
       }
     });
   }, { threshold: 0.4 });
 
-  sections.forEach(s => observer.observe(s));
+  sections.forEach(s => obs.observe(s));
 }
 
-// ---------- Init ----------
+// ── Init ───────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  createFloatingCandies();
-  renderFlavorCards(FLAVORS);
+  renderCards(FLAVORS);
   initFilters();
-  initNavbar();
+  initHeader();
+  initDrawer();
   initScrollTop();
-  initScrollAnimations();
+  initAnimations();
   initActiveNav();
 });
-
