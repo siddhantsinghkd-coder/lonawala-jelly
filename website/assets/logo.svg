@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 170" width="300" height="170">
+  <defs>
+    <filter id="drop-shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000033"/>
+    </filter>
+    <linearGradient id="ovalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFDE7"/>
+      <stop offset="100%" style="stop-color:#FFF9C4"/>
+    </linearGradient>
+    <linearGradient id="jellyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4A148C"/>
+      <stop offset="50%" style="stop-color:#6A1B9A"/>
+      <stop offset="100%" style="stop-color:#4A148C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer oval shadow -->
+  <ellipse cx="152" cy="60" rx="122" ry="50" fill="#00000022" filter="url(#drop-shadow)"/>
+
+  <!-- Outer oval border (dark purple) -->
+  <ellipse cx="150" cy="58" rx="122" ry="50" fill="url(#ovalGrad)" stroke="#2D1B4E" stroke-width="4.5"/>
+
+  <!-- Inner oval border line -->
+  <ellipse cx="150" cy="58" rx="114" ry="42" fill="none" stroke="#2D1B4E" stroke-width="1.5"/>
+
+  <!-- Lonawala cursive text -->
+  <text x="150" y="73"
+    font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', serif"
+    font-style="italic"
+    font-size="40"
+    fill="#1B5E20"
+    text-anchor="middle"
+    font-weight="bold"
+    letter-spacing="-1">Lonawala</text>
+
+  <!-- TM superscript -->
+  <text x="270" y="24"
+    font-family="Arial, sans-serif"
+    font-size="12"
+    fill="#2D1B4E"
+    font-weight="bold">TM</text>
+
+  <!-- Decorative line under text -->
+  <line x1="60" y1="80" x2="240" y2="80" stroke="#2D1B4E" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- JELY bold text -->
+  <text x="150" y="133"
+    font-family="'Arial Black', 'Impact', 'Franklin Gothic Heavy', sans-serif"
+    font-size="46"
+    fill="#3E2723"
+    text-anchor="middle"
+    letter-spacing="8"
+    font-weight="900">JELY</text>
+
+  <!-- Sweet Sugar Coated subtitle -->
+  <text x="150" y="155"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="11"
+    fill="#6D4C41"
+    text-anchor="middle"
+    letter-spacing="3.5"
+    font-weight="600">SWEET SUGAR COATED</text>
+</svg>
+

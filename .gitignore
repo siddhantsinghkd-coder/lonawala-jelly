@@ -1,0 +1,20 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
+*.code-workspace
+
+# Node (if added later)
+node_modules/
+npm-debug.log*
+
+# Env files
+.env
+.env.local
+
+# Large raw assets (keep website/ but skip raw photos from git)
+Lonawala Jelly/
