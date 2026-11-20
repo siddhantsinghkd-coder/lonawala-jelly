@@ -118,7 +118,7 @@ function render(list){
   if(!list.length){grid.innerHTML='<p class="no-results">No flavours found. Try another filter!</p>';return;}
   list.forEach(f=>{
     const c=document.createElement('div');c.className='sg-card';
-    c.innerHTML=`<div class="sg-img"><span class="sg-badge">${CMAP[f.cat]||f.cat}</span><img src="images/${f.folder}/${f.img}" alt="${f.name} Jelly" loading="lazy" onerror="this.style.display='none'"/></div><div class="sg-body"><h2 class="sg-name">${f.name}</h2><p class="sg-price">${f.price} / 200g</p><a href="#" class="sg-buy">🛍️ Buy on Meesho</a><p class="sg-veg">🌿 Pure Veg · No Gelatin</p></div>`;
+    c.innerHTML=`<div class="sg-img"><span class="sg-badge">${CMAP[f.cat]||f.cat}</span><img src="images/${f.folder}/${f.img}" alt="${f.name} Jelly" loading="lazy" onerror="this.style.display='none'"/></div><div class="sg-body"><h2 class="sg-name">${f.name}</h2><p class="sg-price">${f.price} / 200g</p><a href="https://www.meesho.com/KESARBHAVANIINDUSTRIES?ms=2" target="_blank" rel="noopener" class="sg-buy">🛍️ Buy on Meesho</a><p class="sg-veg">🌿 Pure Veg · No Gelatin</p></div>`;
     grid.appendChild(c);
   });
 }
