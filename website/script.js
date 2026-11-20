@@ -223,58 +223,145 @@ document.getElementById('mood-cards')?.addEventListener('click', e => {
   res.scrollIntoView({ behavior:'smooth', block:'nearest' });
 });
 
-// ── FLAVOUR ROULETTE ──────────────────────────────────
+// ── FLAVOUR ROULETTE (Canvas Pie Wheel) ───────────────
 (function() {
-  const btn    = document.getElementById('spin-btn');
-  const ring   = document.getElementById('wheel-ring');
-  const result = document.getElementById('roulette-result');
-  if (!btn || !ring) return;
+  const canvas  = document.getElementById('spin-canvas');
+  const btn     = document.getElementById('spin-btn');
+  const result  = document.getElementById('roulette-result');
+  if (!canvas || !btn) return;
 
-  const WHEEL = ['🥭','🫐','🍓','🌰','🌹','🍉','🍊','🍩','🌿','🍇','🍒','💜','🍈','🍦','💖'];
-  const NAMES = ['Mango','Blueberry','Strawberry','Imli','Rose','Watermelon','Orange','Jalebi','PAN','Black Currant','Lichi','Sweetheart','Guava','Kulfi Sandwich','Sweetheart Heart Pack'];
-  let spinning = false;
-  let rotation = 0;
+  const ctx = canvas.getContext('2d');
+  const SIZE = canvas.width;          // 340
+  const CX   = SIZE / 2;
+  const CY   = SIZE / 2;
+  const R    = SIZE / 2 - 4;         // radius with tiny padding
 
+  const SEGMENTS = [
+    { label:'Mango',           emoji:'🥭', color:'#FF9A3C' },
+    { label:'Strawberry',      emoji:'🍓', color:'#E8395A' },
+    { label:'Blueberry',       emoji:'🫐', color:'#5E2D91' },
+    { label:'Imli',            emoji:'🌰', color:'#A0522D' },
+    { label:'Rose',            emoji:'🌹', color:'#E91E8C' },
+    { label:'Watermelon',      emoji:'🍉', color:'#4CAF50' },
+    { label:'Orange',          emoji:'🍊', color:'#FF6D00' },
+    { label:'Jalebi',          emoji:'🍩', color:'#F9A825' },
+    { label:'PAN',             emoji:'🌿', color:'#2E7D32' },
+    { label:'Black Currant',   emoji:'🍇', color:'#6A1B9A' },
+    { label:'Lichi',           emoji:'🍒', color:'#D81B60' },
+    { label:'Sweetheart',      emoji:'💜', color:'#7B1FA2' },
+    { label:'Guava',           emoji:'🍈', color:'#8BC34A' },
+    { label:'Kulfi Sandwich',  emoji:'🍦', color:'#00ACC1' },
+    { label:'Green Mango',     emoji:'🥭', color:'#558B2F' },
+  ];
+
+  const N          = SEGMENTS.length;
+  const ARC        = (2 * Math.PI) / N;
+  let   currentAngle = 0;   // tracks cumulative rotation in radians
+  let   spinning   = false;
+
+  /* ── Draw the wheel at a given rotation ── */
+  function drawWheel(rot) {
+    ctx.clearRect(0, 0, SIZE, SIZE);
+
+    SEGMENTS.forEach((seg, i) => {
+      const start = rot + i * ARC;
+      const end   = start + ARC;
+
+      // Slice fill
+      ctx.beginPath();
+      ctx.moveTo(CX, CY);
+      ctx.arc(CX, CY, R, start, end);
+      ctx.closePath();
+      ctx.fillStyle = seg.color;
+      ctx.fill();
+
+      // Slice border
+      ctx.lineWidth   = 2;
+      ctx.strokeStyle = 'rgba(255,255,255,0.4)';
+      ctx.stroke();
+
+      // Emoji label
+      const midAngle = start + ARC / 2;
+      const labelR   = R * 0.68;
+      const lx       = CX + Math.cos(midAngle) * labelR;
+      const ly       = CY + Math.sin(midAngle) * labelR;
+
+      ctx.save();
+      ctx.translate(lx, ly);
+      ctx.rotate(midAngle + Math.PI / 2);
+      ctx.font      = '20px serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(seg.emoji, 0, 0);
+      ctx.restore();
+    });
+
+    // Outer ring highlight
+    ctx.beginPath();
+    ctx.arc(CX, CY, R, 0, 2 * Math.PI);
+    ctx.lineWidth   = 5;
+    ctx.strokeStyle = 'rgba(255,255,255,0.25)';
+    ctx.stroke();
+  }
+
+  // Initial draw
+  drawWheel(currentAngle);
+
+  /* ── Easing: ease-out quintic ── */
+  function easeOutQuint(t) {
+    return 1 - Math.pow(1 - t, 5);
+  }
+
+  /* ── Spin ── */
   btn.addEventListener('click', () => {
     if (spinning) return;
     spinning = true;
+    btn.textContent = '🌀 Spinning...';
     btn.classList.add('spinning');
-    btn.textContent = '🎰 Spinning...';
-    if (result) { result.classList.remove('show'); }
+    if (result) result.classList.remove('show');
 
-    const spins   = 4 + Math.floor(Math.random() * 5); // 4–8 full spins
-    const extra   = Math.floor(Math.random() * WHEEL.length);
-    const slots   = ring.querySelectorAll('.wheel-slot');
-    const total   = slots.length;
-    const target  = spins * total + extra;
-    const slotH   = ring.offsetHeight / total;
-    const endRot  = target * (100 / total); // percent
+    // Pick winner
+    const winnerIndex  = Math.floor(Math.random() * N);
+    // We want the winner segment's centre to land at the top (−π/2)
+    // The segment centre of winnerIndex is at: currentAngle + winnerIndex*ARC + ARC/2
+    // We need: currentAngle + winnerIndex*ARC + ARC/2 ≡ -π/2  (mod 2π) pointing up
+    // Add extra full spins for drama: 5–9 rotations
+    const extraSpins   = 5 + Math.floor(Math.random() * 5);
+    const targetOffset = -(currentAngle + winnerIndex * ARC + ARC / 2) - Math.PI / 2;
+    const totalRad     = extraSpins * 2 * Math.PI + ((targetOffset % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
 
-    let frame = 0;
-    const duration = 2800;
-    const start    = performance.now();
+    const startAngle   = currentAngle;
+    const duration     = 4000 + Math.random() * 1500; // 4–5.5s
+    const startTime    = performance.now();
 
     function animate(now) {
-      const elapsed  = now - start;
+      const elapsed  = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      // ease-out cubic
-      const eased    = 1 - Math.pow(1 - progress, 3);
-      const curPct   = eased * endRot;
-      ring.style.transform = `translateY(-${curPct % 100}%)`;
+      const eased    = easeOutQuint(progress);
+
+      currentAngle   = startAngle + eased * totalRad;
+      drawWheel(currentAngle);
 
       if (progress < 1) {
         requestAnimationFrame(animate);
       } else {
-        spinning = false;
+        // Normalise angle
+        currentAngle = currentAngle % (2 * Math.PI);
+        spinning     = false;
         btn.classList.remove('spinning');
         btn.textContent = '🎰 SPIN AGAIN';
-        const winner = NAMES[extra % NAMES.length];
-        const emoji  = WHEEL[extra % WHEEL.length];
+
+        const seg = SEGMENTS[winnerIndex];
         if (result) {
           result.innerHTML = `
-            <div style="font-size:2.2rem;margin-bottom:6px">${emoji}</div>
-            <div class="roulette-result-flavour">Your Flavour: ${winner}!</div>
-            <div class="roulette-result-cta">Scroll up to see it in the shop ↑</div>
+            <div style="font-size:2.6rem;margin-bottom:4px">${seg.emoji}</div>
+            <div class="roulette-result-flavour">Your Flavour: ${seg.label}!</div>
+            <div class="roulette-result-cta">
+              <a href="https://www.meesho.com/KESARBHAVANIINDUSTRIES?ms=2" target="_blank" rel="noopener"
+                 style="color:var(--purple);font-weight:800;text-decoration:underline">
+                Buy ${seg.label} Jelly →
+              </a>
+            </div>
           `;
           result.classList.add('show');
         }

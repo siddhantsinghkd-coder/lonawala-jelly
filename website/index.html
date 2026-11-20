@@ -402,22 +402,18 @@
       <button class="spin-btn" id="spin-btn" aria-label="Spin for a flavour">
         🎰 SPIN THE WHEEL
       </button>
+      <div class="roulette-result" id="roulette-result" aria-live="polite"></div>
     </div>
     <div class="roulette-display">
-      <div class="wheel-container" id="wheel-container">
-        <div class="wheel-ring" id="wheel-ring">
-          <div class="wheel-slot">🥭</div>
-          <div class="wheel-slot">🫐</div>
-          <div class="wheel-slot">🍓</div>
-          <div class="wheel-slot">🌰</div>
-          <div class="wheel-slot">🌹</div>
-          <div class="wheel-slot">🍉</div>
-          <div class="wheel-slot">🍊</div>
-          <div class="wheel-slot">🍩</div>
+      <div class="wheel-wrap">
+        <!-- Pointer at top -->
+        <div class="wheel-pointer-top">▼</div>
+        <div class="wheel-canvas-wrap">
+          <canvas id="spin-canvas" width="340" height="340"></canvas>
+          <!-- Center hub -->
+          <div class="wheel-hub">🍬</div>
         </div>
-        <div class="wheel-pointer">▼</div>
       </div>
-      <div class="roulette-result" id="roulette-result" aria-live="polite"></div>
     </div>
   </div>
 </section>
