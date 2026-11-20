@@ -80,108 +80,109 @@
 <div class="drawer-overlay" id="drawer-overlay"></div>
 
 <!-- ══════════════════════════════════════
-     HERO — Full-bleed poster
+     HERO — Brutalist Poster (Superdesign)
 ══════════════════════════════════════ -->
 <section class="hero" id="home">
-  <div class="hero-bg">
-    <img src="assets/hero-poster.jpg" alt="" role="presentation" fetchpriority="high"/>
-  </div>
-  <div class="hero-overlay"></div>
-  <!-- Floating emoji particles -->
-  <div class="hero-particles" aria-hidden="true">
-    <span class="particle">🍬</span>
-    <span class="particle">✨</span>
-    <span class="particle">🍭</span>
-    <span class="particle">⭐</span>
-    <span class="particle">🍬</span>
-    <span class="particle">💜</span>
-    <span class="particle">🍭</span>
-    <span class="particle">✨</span>
-  </div>
+  <!-- Animated gradient blobs -->
+  <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+  <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+  <div class="hero-blob hero-blob-3" aria-hidden="true"></div>
+  <!-- Faint poster bg -->
+  <div class="hero-bg" aria-hidden="true"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow">MEET YOUR NEW FAVOURITE TREAT</p>
-    <h1 class="hero-title">
-      <span class="hero-line">A Little Jelly.</span>
-      <span class="hero-line">A Lot of Joy.</span>
-    </h1>
-    <p class="hero-sub">Colourful, fruity jelly candies made to<br>bring a little sweetness to every moment.</p>
-    <div class="hero-btns">
-      <div class="offset-btn-wrap">
-        <a href="#shop" class="offset-btn offset-btn-primary">Shop Jellies →</a>
+    <div class="container">
+      <!-- Brutalist oversized headline with indented line 2 -->
+      <h1 class="hero-title">
+        Woh Wali
+        <span class="line-2 accent-word">Feeling.</span>
+      </h1>
+      <!-- Glassmorphism badges row -->
+      <div class="hero-meta">
+        <span class="hero-badge">🌿 Pure Veg</span>
+        <span class="hero-badge">✨ No Gelatin</span>
+        <span class="hero-badge">🍬 17 Flavours</span>
+        <span class="hero-badge">📦 ₹149 / 200g</span>
       </div>
-      <div class="offset-btn-wrap">
-        <a href="#roulette" class="offset-btn offset-btn-outline">🎲 Spin for a Flavour</a>
+      <!-- CTA row — brutalist slide-in buttons -->
+      <div class="hero-cta-row">
+        <a href="#shop" class="btn-brutalist">
+          <span>🛒 Shop All Flavours</span>
+        </a>
+        <a href="#roulette" class="btn-outline">🎲 Spin for a Flavour</a>
+      </div>
+      <!-- Trust strip -->
+      <div class="hero-trust">
+        <div class="trust-badge"><span>🏪</span> On Meesho</div>
+        <div class="trust-badge"><span>🚚</span> Pan India Delivery</div>
+        <div class="trust-badge"><span>⭐</span> 4.8 / 5 Rating</div>
+        <div class="trust-badge"><span>🎯</span> Since 2018</div>
       </div>
     </div>
   </div>
-  <a href="#shop" class="hero-scroll-hint" aria-label="Scroll down">
-    <span class="scroll-arrow">↓</span>
-  </a>
 </section>
 
 <!-- ══════════════════════════════════════
-     FLAVOUR MARQUEE
+     FLAVOUR MARQUEE — Brutalist dual strip
 ══════════════════════════════════════ -->
-<div class="marquee-wrap">
-  <div class="marquee-row marquee-row-1">
-    <div class="marquee-inner">
-      <span>🥭 Mango</span><span class="sep">•</span>
-      <span>🍒 Lichi</span><span class="sep">•</span>
-      <span>🫐 Blueberry</span><span class="sep">•</span>
-      <span>🌰 Imli</span><span class="sep">•</span>
-      <span>🌹 Rose</span><span class="sep">•</span>
-      <span>🍇 Black Currant</span><span class="sep">•</span>
-      <span>🍦 Kulfi Sandwich</span><span class="sep">•</span>
-      <span>🥭 Green Mango</span><span class="sep">•</span>
-      <span>🍉 Watermelon</span><span class="sep">•</span>
-      <span>🍓 Strawberry</span><span class="sep">•</span>
-      <span>🍈 Guava</span><span class="sep">•</span>
-      <span>🌿 PAN</span><span class="sep">•</span>
-      <span>🍦 Sandwich</span><span class="sep">•</span>
-      <span>🍩 Jalebi</span><span class="sep">•</span>
-      <span>💜 Sweetheart</span><span class="sep">•</span>
-      <span>🍊 Orange</span><span class="sep">•</span>
-      <span>💖 Sweetheart Heart</span><span class="sep">•</span>
-      <!-- duplicate -->
-      <span>🥭 Mango</span><span class="sep">•</span>
-      <span>🍒 Lichi</span><span class="sep">•</span>
-      <span>🫐 Blueberry</span><span class="sep">•</span>
-      <span>🌰 Imli</span><span class="sep">•</span>
-      <span>🌹 Rose</span><span class="sep">•</span>
-      <span>🍇 Black Currant</span><span class="sep">•</span>
-      <span>🍦 Kulfi Sandwich</span><span class="sep">•</span>
-      <span>🥭 Green Mango</span><span class="sep">•</span>
-      <span>🍉 Watermelon</span><span class="sep">•</span>
-    </div>
+<div class="marquee-section">
+  <div class="marquee-track">
+    <div class="marquee-item">🥭 Mango <span class="dot">•</span></div>
+    <div class="marquee-item">🍒 Lichi <span class="dot">•</span></div>
+    <div class="marquee-item">🫐 Blueberry <span class="dot">•</span></div>
+    <div class="marquee-item">🌰 Imli <span class="dot">•</span></div>
+    <div class="marquee-item">🌹 Rose <span class="dot">•</span></div>
+    <div class="marquee-item">🍇 Black Currant <span class="dot">•</span></div>
+    <div class="marquee-item">🍦 Kulfi Sandwich <span class="dot">•</span></div>
+    <div class="marquee-item">🥭 Green Mango <span class="dot">•</span></div>
+    <div class="marquee-item">🍉 Watermelon <span class="dot">•</span></div>
+    <div class="marquee-item">🍓 Strawberry <span class="dot">•</span></div>
+    <div class="marquee-item">🍈 Guava <span class="dot">•</span></div>
+    <div class="marquee-item">🌿 PAN <span class="dot">•</span></div>
+    <div class="marquee-item">🍩 Jalebi <span class="dot">•</span></div>
+    <div class="marquee-item">💜 Sweetheart <span class="dot">•</span></div>
+    <div class="marquee-item">🍊 Orange <span class="dot">•</span></div>
+    <!-- duplicate for seamless loop -->
+    <div class="marquee-item">🥭 Mango <span class="dot">•</span></div>
+    <div class="marquee-item">🍒 Lichi <span class="dot">•</span></div>
+    <div class="marquee-item">🫐 Blueberry <span class="dot">•</span></div>
+    <div class="marquee-item">🌰 Imli <span class="dot">•</span></div>
+    <div class="marquee-item">🌹 Rose <span class="dot">•</span></div>
+    <div class="marquee-item">🍇 Black Currant <span class="dot">•</span></div>
+    <div class="marquee-item">🍦 Kulfi Sandwich <span class="dot">•</span></div>
+    <div class="marquee-item">🥭 Green Mango <span class="dot">•</span></div>
+    <div class="marquee-item">🍉 Watermelon <span class="dot">•</span></div>
+    <div class="marquee-item">🍓 Strawberry <span class="dot">•</span></div>
   </div>
-  <div class="marquee-row marquee-row-2">
-    <div class="marquee-inner marquee-reverse">
-      <span>Pure Veg</span><span class="sep">•</span>
-      <span>No Gelatin</span><span class="sep">•</span>
-      <span>Real Fruit Pulp</span><span class="sep">•</span>
-      <span>Sugar Coated</span><span class="sep">•</span>
-      <span>Made in Gujarat</span><span class="sep">•</span>
-      <span>17 Flavours</span><span class="sep">•</span>
-      <span>Pure Veg</span><span class="sep">•</span>
-      <span>No Gelatin</span><span class="sep">•</span>
-      <span>Real Fruit Pulp</span><span class="sep">•</span>
-      <span>Sugar Coated</span><span class="sep">•</span>
-      <span>Made in Gujarat</span><span class="sep">•</span>
-      <span>17 Flavours</span><span class="sep">•</span>
-      <span>Pure Veg</span><span class="sep">•</span>
-      <span>No Gelatin</span><span class="sep">•</span>
-      <span>Real Fruit Pulp</span><span class="sep">•</span>
-      <span>Sugar Coated</span><span class="sep">•</span>
-      <span>Made in Gujarat</span><span class="sep">•</span>
-    </div>
+</div>
+<div class="marquee-section light">
+  <div class="marquee-track reverse">
+    <div class="marquee-item">Pure Veg <span class="dot">•</span></div>
+    <div class="marquee-item">No Gelatin <span class="dot">•</span></div>
+    <div class="marquee-item">Real Fruit Pulp <span class="dot">•</span></div>
+    <div class="marquee-item">Sugar Coated <span class="dot">•</span></div>
+    <div class="marquee-item">Made in Gujarat <span class="dot">•</span></div>
+    <div class="marquee-item">17 Flavours <span class="dot">•</span></div>
+    <div class="marquee-item">Pan India Delivery <span class="dot">•</span></div>
+    <div class="marquee-item">₹149 Only <span class="dot">•</span></div>
+    <div class="marquee-item">Pure Veg <span class="dot">•</span></div>
+    <div class="marquee-item">No Gelatin <span class="dot">•</span></div>
+    <div class="marquee-item">Real Fruit Pulp <span class="dot">•</span></div>
+    <div class="marquee-item">Sugar Coated <span class="dot">•</span></div>
+    <div class="marquee-item">Made in Gujarat <span class="dot">•</span></div>
+    <div class="marquee-item">17 Flavours <span class="dot">•</span></div>
+    <div class="marquee-item">Pan India Delivery <span class="dot">•</span></div>
+    <div class="marquee-item">₹149 Only <span class="dot">•</span></div>
   </div>
 </div>
 
 <!-- ══════════════════════════════════════
-     TAGLINE
+     TAGLINE — Bold Editorial grid bg
 ══════════════════════════════════════ -->
 <section class="tagline-section">
-  <h2 class="tagline-text reveal">All the Flavours,<br><em>None of the FOMO.</em></h2>
+  <div class="container">
+    <h2 class="tagline-text reveal">All the <span class="highlight">Flavours,</span><br>None of the FOMO.</h2>
+    <p class="tagline-sub reveal">India's most loved sugar-coated jelly candy. Pure Veg · No Gelatin · Real Fruit Pulp · 17 Amazing Flavours.</p>
+  </div>
 </section>
 
 <!-- ══════════════════════════════════════

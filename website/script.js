@@ -113,7 +113,7 @@ function buildCards(list) {
       </div>
       <h3>${f.name}</h3>
       <p class="pcard-price">${f.price} <small>/ 200g</small></p>
-      <a href="https://www.meesho.com/KESARBHAVANIINDUSTRIES?ms=2" target="_blank" rel="noopener" class="pcard-buy" aria-label="Buy ${f.name} on Meesho">🛍️ Buy on Meesho</a>
+      <a href="https://www.meesho.com/KESARBHAVANIINDUSTRIES?ms=2" target="_blank" rel="noopener" class="pcard-buy" aria-label="Buy ${f.name} on Meesho"><span>🛍️ Buy on Meesho →</span></a>
       <p class="pcard-veg">🌿 Pure Veg · No Gelatin</p>
     `;
     track.appendChild(card);
