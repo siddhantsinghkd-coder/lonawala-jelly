@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop All Flavours – Lonawala Jelly</title>
+  <meta name="description" content="Shop all 17 flavours of Lonawala Jelly — Mango, Strawberry, Imli, Rose, Blueberry and more. Pure Veg, No Gelatin. Buy on Meesho."/>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,800;0,900;1,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .shop-page-hero{background:var(--purple);color:var(--white);padding:64px 32px 48px;text-align:center;border-radius:0 0 var(--r-xl) var(--r-xl);margin-bottom:48px}
+    .shop-page-hero h1{font-family:'Nunito',system-ui,sans-serif;font-size:clamp(2.8rem,7vw,5.5rem);font-weight:900;line-height:1;letter-spacing:-.03em}
+    .shop-page-hero p{margin-top:16px;font-size:1.05rem;opacity:.88;max-width:460px;margin-left:auto;margin-right:auto}
+    .shop-grid-wrap{padding:0 32px 80px;max-width:1300px;margin:0 auto}
+    .shop-filters{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:36px}
+    .shop-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .sg-card{background:var(--white);border-radius:20px;overflow:hidden;border:1px solid rgba(94,45,145,.08);transition:all .3s;position:relative;cursor:pointer}
+    .sg-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(94,45,145,.18)}
+    .sg-img{height:260px;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:16px;background:var(--cream)}
+    .sg-img img{max-height:100%;max-width:100%;object-fit:contain;transition:transform .4s ease}
+    .sg-card:hover .sg-img img{transform:scale(1.08)}
+    .sg-body{padding:16px 18px 20px}
+    .sg-badge{position:absolute;top:12px;right:12px;background:var(--purple);color:#fff;font-size:.62rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:50px}
+    .sg-name{font-family:'Nunito',system-ui,sans-serif;font-size:1.3rem;font-weight:900;color:var(--purple);line-height:1.1;margin-bottom:4px}
+    .sg-price{font-size:.85rem;color:var(--text-muted);font-weight:600;margin-bottom:12px}
+    .sg-buy{display:block;text-align:center;background:var(--purple);color:#fff;padding:10px;border-radius:var(--r-sm);font-size:.82rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;border-bottom:3px solid var(--purple-dark);transition:all .2s}
+    .sg-buy:hover{background:var(--purple-dark)}
+    .sg-veg{font-size:.7rem;color:#2E7D32;font-weight:700;margin-top:8px;text-align:center}
+    .no-results{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--text-muted);font-weight:600;font-size:1.1rem}
+    @media(max-width:1024px){.shop-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:720px){.shop-grid{grid-template-columns:repeat(2,1fr)}.shop-grid-wrap{padding:0 16px 60px}}
+    @media(max-width:420px){.shop-grid{grid-template-columns:1fr 1fr}.sg-img{height:200px}}
+  </style>
+</head>
+<body>
+
+<div class="ann-bar" id="ann-bar">
+  <div class="ann-messages" id="ann-messages">
+    <span class="ann-msg active">🍬 Free delivery on orders above ₹499 — Shop Now →</span>
+    <span class="ann-msg">✨ Pure Veg · No Gelatin · 17 Flavours</span>
+    <span class="ann-msg">🏪 Available on Meesho · Amazon · Flipkart</span>
+  </div>
+</div>
+
+<header id="header">
+  <nav class="nav container">
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="/" class="nav-logo" aria-label="Lonawala Jelly Home">
+      <img src="assets/logo.svg" alt="Lonawala Jelly" height="52"/>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#nostalgia">Nostalgia</a></li>
+      <li><a href="/#mood">Mood Pick</a></li>
+      <li><a href="/#find-us">Find Us</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="shop.html" class="nav-cta">Shop All →</a>
+    </div>
+  </nav>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-top">
+    <img src="assets/logo.svg" alt="Lonawala Jelly" height="40"/>
+    <button class="drawer-close" id="drawer-close" aria-label="Close">✕</button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="/">🏠 Home</a></li>
+    <li><a href="shop.html">🛒 Shop All Flavours</a></li>
+    <li><a href="/#nostalgia">✨ Nostalgia</a></li>
+    <li><a href="/#find-us">🏪 Find Us</a></li>
+    <li><a href="/#contact">📞 Contact</a></li>
+  </ul>
+</div>
+<div class="drawer-overlay" id="drawer-overlay"></div>
+
+<!-- PAGE HERO -->
+<div class="shop-page-hero">
+  <h1>Shop All Flavours</h1>
+  <p>17 amazing flavours. Pure Veg. No Gelatin. All the joy, every single bite.</p>
+</div>
+
+<!-- FILTERS + GRID -->
+<div class="shop-grid-wrap">
+  <div class="shop-filters" id="shop-filters" role="tablist">
+    <button class="tab active" data-cat="all">All (17)</button>
+    <button class="tab" data-cat="fruit">🍓 Fruity (8)</button>
+    <button class="tab" data-cat="desi">🌿 Desi (4)</button>
+    <button class="tab" data-cat="floral">🌹 Floral (1)</button>
+    <button class="tab" data-cat="special">💜 Special (3)</button>
+  </div>
+  <div class="shop-grid" id="shop-grid">
+    <!-- filled by JS -->
+  </div>
+</div>
+
+<a href="https://wa.me/919727259995?text=Hi%2C%20I%27m%20interested%20in%20ordering%20Lonawala%20Jelly!" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+</a>
+<button class="scroll-top" id="scroll-top" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<script>
+const FLAVORS=[{id:1,name:"Mango",folder:"Mango",img:"IMG_2133.JPG",cat:"fruit",emoji:"🥭",price:"₹149"},{id:2,name:"Lichi",folder:"Lichi",img:"IMG_2137.JPG",cat:"fruit",emoji:"🍒",price:"₹149"},{id:3,name:"Blueberry",folder:"Blueberry_",img:"IMG_2141.JPG",cat:"fruit",emoji:"🫐",price:"₹149"},{id:4,name:"Imli",folder:"Imli",img:"IMG_2145.JPG",cat:"desi",emoji:"🌰",price:"₹149"},{id:5,name:"Rose",folder:"Rose",img:"IMG_2149.JPG",cat:"floral",emoji:"🌹",price:"₹149"},{id:6,name:"Black Currant",folder:"Black currant",img:"IMG_2153.JPG",cat:"fruit",emoji:"🍇",price:"₹149"},{id:7,name:"Kulfi Sandwich",folder:"Kulfi Sandwich_",img:"IMG_2157.JPG",cat:"desi",emoji:"🍦",price:"₹149"},{id:8,name:"Green Mango",folder:"Green Mango_",img:"IMG_2161.JPG",cat:"fruit",emoji:"🥭",price:"₹149"},{id:9,name:"Watermelon",folder:"Watermelon_",img:"IMG_2165.JPG",cat:"fruit",emoji:"🍉",price:"₹149"},{id:10,name:"Strawberry",folder:"Strawberry_",img:"IMG_2169.JPG",cat:"fruit",emoji:"🍓",price:"₹149"},{id:11,name:"Guava",folder:"Guava",img:"IMG_2173.JPG",cat:"fruit",emoji:"🍈",price:"₹149"},{id:12,name:"PAN",folder:"PAN",img:"IMG_2177.JPG",cat:"desi",emoji:"🌿",price:"₹149"},{id:13,name:"Sandwich",folder:"Sandwich_",img:"IMG_2181.JPG",cat:"special",emoji:"🍦",price:"₹149"},{id:14,name:"Jalebi",folder:"Jalebi",img:"IMG_2185.JPG",cat:"desi",emoji:"🍩",price:"₹149"},{id:15,name:"Sweetheart",folder:"Sweetheart_",img:"IMG_2189.JPG",cat:"special",emoji:"💜",price:"₹149"},{id:16,name:"Orange",folder:"Orange",img:"IMG_2193.JPG",cat:"fruit",emoji:"🍊",price:"₹149"},{id:17,name:"Sweetheart Heart Pack",folder:"Sweetheart Heart Packing",img:"IMG_2197.JPG",cat:"special",emoji:"💖",price:"₹199"}];
+const CMAP={all:"All",fruit:"Fruity",desi:"Desi",floral:"Floral",special:"Special"};
+
+function render(list){
+  const grid=document.getElementById('shop-grid');
+  grid.innerHTML='';
+  if(!list.length){grid.innerHTML='<p class="no-results">No flavours found. Try another filter!</p>';return;}
+  list.forEach(f=>{
+    const c=document.createElement('div');c.className='sg-card';
+    c.innerHTML=`<div class="sg-img"><span class="sg-badge">${CMAP[f.cat]||f.cat}</span><img src="images/${f.folder}/${f.img}" alt="${f.name} Jelly" loading="lazy" onerror="this.style.display='none'"/></div><div class="sg-body"><h2 class="sg-name">${f.name}</h2><p class="sg-price">${f.price} / 200g</p><a href="#" class="sg-buy">🛍️ Buy on Meesho</a><p class="sg-veg">🌿 Pure Veg · No Gelatin</p></div>`;
+    grid.appendChild(c);
+  });
+}
+render(FLAVORS);
+
+document.getElementById('shop-filters')?.addEventListener('click',e=>{
+  const btn=e.target.closest('.tab');if(!btn)return;
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  const cat=btn.dataset.cat;
+  render(cat==='all'?FLAVORS:FLAVORS.filter(f=>f.cat===cat));
+});
+
+// Shared nav/drawer/scroll logic
+const msgs=document.querySelectorAll('.ann-msg');let cur=0;
+setInterval(()=>{msgs[cur].classList.remove('active');cur=(cur+1)%msgs.length;msgs[cur].classList.add('active');},3200);
+window.addEventListener('scroll',()=>{document.getElementById('header')?.classList.toggle('scrolled',window.scrollY>50);document.getElementById('scroll-top')?.classList.toggle('vis',window.scrollY>450);},{passive:true});
+document.getElementById('scroll-top')?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+(function(){const h=document.getElementById('hamburger'),d=document.getElementById('drawer'),o=document.getElementById('drawer-overlay'),c=document.getElementById('drawer-close');const open=()=>{d?.classList.add('open');o?.classList.add('open');h?.setAttribute('aria-expanded','true');document.body.style.overflow='hidden'};const close=()=>{d?.classList.remove('open');o?.classList.remove('open');h?.setAttribute('aria-expanded','false');document.body.style.overflow=''};h?.addEventListener('click',open);c?.addEventListener('click',close);o?.addEventListener('click',close);document.addEventListener('keydown',e=>e.key==='Escape'&&close());})();
+</script>
+</body>
+</html>
